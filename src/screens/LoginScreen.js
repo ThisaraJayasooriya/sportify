@@ -75,7 +75,7 @@ const LoginScreen = ({ navigation }) => {
               <Icons.Activity stroke="white" width={40} height={40} />
             </View>
             <Text className={`text-3xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-              Sports & Lifestyle
+              Sportify
             </Text>
             <Text className={`text-base mt-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
               Sign in to continue
