@@ -1,0 +1,10 @@
+# Assets folder
+# Add your app icon, splash screen, and other assets here
+
+# Required files for Expo (you can add these later):
+# - icon.png (1024x1024) - App icon
+# - splash.png (1242x2436) - Splash screen
+# - adaptive-icon.png (1024x1024) - Android adaptive icon
+# - favicon.png (48x48) - Web favicon
+
+# The app will work without these files, but Expo may show warnings.
