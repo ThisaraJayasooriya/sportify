@@ -32,6 +32,7 @@ const LoginScreen = ({ navigation }) => {
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.auth);
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = async (values) => {
     dispatch(loginStart());
@@ -145,8 +146,26 @@ const LoginScreen = ({ navigation }) => {
                       onChangeText={handleChange('password')}
                       onBlur={handleBlur('password')}
                       value={values.password}
-                      secureTextEntry
+                      secureTextEntry={!showPassword}
                     />
+                    <TouchableOpacity 
+                      onPress={() => setShowPassword(!showPassword)}
+                      className="ml-2"
+                    >
+                      {showPassword ? (
+                        <Icons.EyeOff 
+                          stroke={isDarkMode ? '#9CA3AF' : '#6B7280'} 
+                          width={20} 
+                          height={20} 
+                        />
+                      ) : (
+                        <Icons.Eye 
+                          stroke={isDarkMode ? '#9CA3AF' : '#6B7280'} 
+                          width={20} 
+                          height={20} 
+                        />
+                      )}
+                    </TouchableOpacity>
                   </View>
                   {touched.password && errors.password && (
                     <Text className="text-red-500 text-xs mt-1">{errors.password}</Text>
