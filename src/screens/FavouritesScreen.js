@@ -42,7 +42,7 @@ const FavouritesScreen = ({ navigation }) => {
   const renderHeader = () => (
     <View className="mb-6">
       <Text className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
-        My Favourites ❤️
+        My Favourites 
       </Text>
       <Text className={`text-base mt-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
         {favourites.length} {favourites.length === 1 ? 'event' : 'events'} saved
